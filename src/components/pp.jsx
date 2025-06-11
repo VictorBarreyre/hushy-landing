@@ -15,6 +15,49 @@ const PrivacyPolicy = () => {
 
     const sections = [
         {
+            icon: <Globe className="w-6 h-6" />,
+            title: "Google Sign-In Integration",
+            content: [
+                {
+                    subtitle: "Information We Receive from Google",
+                    items: [
+                        "Basic profile information (name, email address, profile picture)",
+                        "Google account unique identifier",
+                        "Email verification status",
+                        "Language preference"
+                    ]
+                },
+                {
+                    subtitle: "How We Use Google Sign-In",
+                    items: [
+                        "To create and authenticate your Hushy account",
+                        "To verify your email address without additional steps",
+                        "To provide a secure and convenient login experience",
+                        "To protect against fraudulent account creation"
+                    ]
+                },
+                {
+                    subtitle: "Important Google OAuth Information",
+                    items: [
+                        "We ONLY access your basic profile information",
+                        "We do NOT access your Gmail messages, contacts, or calendar",
+                        "We do NOT access your Google Drive files",
+                        "We do NOT post anything to your Google account",
+                        "You can revoke Hushy's access anytime from your Google Account settings"
+                    ]
+                },
+                {
+                    subtitle: "Data Security with Google Sign-In",
+                    items: [
+                        "Your Google password is never shared with or stored by Hushy",
+                        "Authentication is handled entirely by Google's secure servers",
+                        "We use industry-standard OAuth 2.0 protocol",
+                        "Google Sign-In provides additional security through Google's own protections"
+                    ]
+                }
+            ]
+        },
+        {
             icon: <Database className="w-6 h-6" />,
             title: "Information We Collect",
             content: [
@@ -106,7 +149,8 @@ const PrivacyPolicy = () => {
                         "Delete your account and associated data",
                         "Export your data in a portable format",
                         "Opt-out of certain data processing",
-                        "Withdraw consent at any time"
+                        "Withdraw consent at any time",
+                        "Revoke Google OAuth access from your Google Account settings"
                     ]
                 }
             ]
@@ -118,20 +162,22 @@ const PrivacyPolicy = () => {
             {/* Navigation */}
             <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/80 backdrop-blur-lg shadow-lg' : 'bg-transparent'}`}>
                 <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-                     <div className="flex items-center space-x-2">
-            <Link to="/" className="text-2xl font-bold bg-gradient-to-r from-[#FF587E] to-[#CC4B8D] bg-clip-text text-transparent">hushy</Link>
-          </div>
-                
-                    <button className="bg-black text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-200">
-                        Get Started
-                    </button>
+                    <div className="flex items-center space-x-2">
+                        <Link to="/" className="text-2xl font-bold bg-gradient-to-r from-[#FF587E] to-[#CC4B8D] bg-clip-text text-transparent">hushy</Link>
+                    </div>
+                    <div className="flex items-center space-x-6">
+                        <Link to="/" className="text-gray-600 hover:text-gray-900 transition-colors">Home</Link>
+                        <Link to="/terms" className="text-gray-600 hover:text-gray-900 transition-colors">Terms</Link>
+                        <button className="bg-black text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-200">
+                            Get Started
+                        </button>
+                    </div>
                 </div>
             </nav>
 
             {/* Hero Section */}
             <section className="pt-32 pb-16 px-6">
                 <div className="max-w-4xl mx-auto text-center">
-
                     <h1 className="text-4xl md:text-5xl font-bold mb-6">Privacy Policy</h1>
                     <p className="text-xl text-gray-600 mb-4">Your privacy is fundamental to how we build Hushy</p>
                     <p className="text-sm text-[#94A3B8]">Last updated: January 2025</p>
@@ -219,6 +265,18 @@ const PrivacyPolicy = () => {
                                 <p className="text-gray-600">
                                     <span className="font-semibold">Support:</span> support@hushy.app
                                 </p>
+                                <p className="text-gray-600">
+                                    <span className="font-semibold">Google OAuth concerns:</span> privacy@hushy.app
+                                </p>
+                                <p className="text-gray-600 text-sm mt-4">
+                                    To manage your Google permissions, visit: 
+                                    <a href="https://myaccount.google.com/permissions" 
+                                       target="_blank" 
+                                       rel="noopener noreferrer"
+                                       className="text-[#FF587E] hover:underline ml-1">
+                                        Google Account Permissions
+                                    </a>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -233,10 +291,10 @@ const PrivacyPolicy = () => {
                             <span className="text-2xl font-bold">hushy</span>
                         </div>
                         <div className="flex space-x-6">
-                            <a href="/privacy" className="text-[#FF587E]">Privacy</a>
-                            <a href="/terms" className="hover:text-[#FF587E] transition-colors">Terms</a>
+                            <Link to="/" className="hover:text-[#FF587E] transition-colors">Home</Link>
+                            <Link to="/privacy" className="text-[#FF587E]">Privacy</Link>
+                            <Link to="/terms" className="hover:text-[#FF587E] transition-colors">Terms</Link>
                             <a href="mailto:support@hushy.app" className="hover:text-[#FF587E] transition-colors">Support</a>
-                            <a href="/blog" className="hover:text-[#FF587E] transition-colors">Blog</a>
                         </div>
                     </div>
                     <div className="mt-8 pt-8 border-t border-gray-800 text-center text-[#94A3B8]">

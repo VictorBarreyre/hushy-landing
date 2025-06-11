@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { ChevronDown, MessageCircle, Lock, Users, Sparkles, Globe, Shield, Heart, Unlock, MapPin, Clock, Share2, Apple, ArrowRight } from 'lucide-react';
+import { ChevronDown, MessageCircle, Lock, Users, Sparkles, Globe, Shield, Heart, Unlock, MapPin, Clock, Share2, Apple, ArrowRight, ChevronRight } from 'lucide-react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faPlus, faComments, faUser } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
@@ -95,6 +95,8 @@ const LandingPage = () => {
             <a href="#features" className="text-gray-700 hover:text-pink-600 transition-colors">Features</a>
             <a href="#how" className="text-gray-700 hover:text-pink-600 transition-colors">How it Works</a>
             <a href="#pricing" className="text-gray-700 hover:text-pink-600 transition-colors">Pricing</a>
+            <Link to="/privacy" className="text-gray-700 hover:text-pink-600 transition-colors">Privacy</Link>
+            <Link to="/terms" className="text-gray-700 hover:text-pink-600 transition-colors">Terms</Link>
           </div>
           <button className="bg-black text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-200">
             Get Started
@@ -432,7 +434,41 @@ const LandingPage = () => {
         </div>
       </section>
 
-
+      {/* Privacy & Security Section - NOUVELLE SECTION */}
+      <section className="py-20 px-6">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-gradient-to-r from-[#FF587E] to-[#CC4B8D] rounded-3xl p-1">
+            <div className="bg-white rounded-3xl p-12">
+              <h2 className="text-3xl font-bold mb-6 text-center">Your Privacy & Security Matter</h2>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-xl font-bold mb-3 flex items-center">
+                    <Shield className="w-5 h-5 mr-2 text-[#FF587E]" />
+                    Secure Google Sign-In
+                  </h3>
+                  <p className="text-gray-600 mb-4">
+                    We use Google OAuth for secure authentication. Your Google password is never shared with us, and we only access your basic profile information.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-3 flex items-center">
+                    <Lock className="w-5 h-5 mr-2 text-[#FF587E]" />
+                    End-to-End Protection
+                  </h3>
+                  <p className="text-gray-600 mb-4">
+                    All your hushys are encrypted and secure. Only paying supporters can unlock your secrets. Your data is yours and always protected.
+                  </p>
+                </div>
+              </div>
+              <div className="text-center mt-8">
+                <Link to="/privacy" className="text-[#FF587E] font-semibold hover:underline">
+                  Read our full Privacy Policy <ChevronRight className="inline w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Community Section */}
       <section className="py-20 px-6 bg-gradient-to-r from-pink-50 to-purple-50">
@@ -483,24 +519,47 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* Footer */}
+      {/* Footer - MODIFIÉ */}
       <footer className="bg-gray-900 text-white py-12 px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center space-x-2 mb-4 md:mb-0">
-              <span className="text-2xl font-bold">hushy</span>
+          <div className="grid md:grid-cols-4 gap-8 mb-8">
+            <div>
+              <h3 className="text-2xl font-bold mb-4">hushy</h3>
+              <p className="text-gray-400">
+                Share secrets, build communities, create connections.
+              </p>
             </div>
-
-            <div className="flex space-x-6">
-              <Link to="/privacy" className="hover:text-pink-400 transition-colors">Privacy</Link>
-              <Link to="/terms" className="hover:text-pink-400 transition-colors">Terms</Link>
-              <a href="mailto:support@hushy.app" className="hover:text-pink-400 transition-colors">Support</a>
+            <div>
+              <h4 className="font-semibold mb-4">Product</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li><a href="#features" className="hover:text-white transition-colors">Features</a></li>
+                <li><a href="#how" className="hover:text-white transition-colors">How it Works</a></li>
+                <li><a href="#pricing" className="hover:text-white transition-colors">Pricing</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Legal</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li><Link to="/privacy" className="hover:text-white transition-colors font-semibold">Privacy Policy</Link></li>
+                <li><Link to="/terms" className="hover:text-white transition-colors font-semibold">Terms of Service</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Support</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li><a href="mailto:support@hushy.app" className="hover:text-white transition-colors">Contact Us</a></li>
+                <li><a href="mailto:privacy@hushy.app" className="hover:text-white transition-colors">Privacy Questions</a></li>
+              </ul>
             </div>
           </div>
 
-          <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
-            <p>&copy; 2025 Hushy. All rights reserved.</p>
-            <p className="mt-2 text-sm">Share secrets. Build communities. Create connections.</p>
+          <div className="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+            <p className="text-gray-400 mb-4 md:mb-0">&copy; 2025 Hushy. All rights reserved.</p>
+            <div className="flex space-x-6">
+              <Link to="/privacy" className="text-gray-400 hover:text-white transition-colors">Privacy</Link>
+              <Link to="/terms" className="text-gray-400 hover:text-white transition-colors">Terms</Link>
+              <a href="mailto:support@hushy.app" className="text-gray-400 hover:text-white transition-colors">Support</a>
+            </div>
           </div>
         </div>
       </footer>
