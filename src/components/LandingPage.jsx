@@ -95,8 +95,8 @@ const LandingPage = () => {
             <a href="#features" className="text-gray-700 hover:text-pink-600 transition-colors">Features</a>
             <a href="#how" className="text-gray-700 hover:text-pink-600 transition-colors">How it Works</a>
             <a href="#pricing" className="text-gray-700 hover:text-pink-600 transition-colors">Pricing</a>
-            <Link to="/privacy" className="text-gray-700 hover:text-pink-600 transition-colors">Privacy</Link>
-            <Link to="/terms" className="text-gray-700 hover:text-pink-600 transition-colors">Terms</Link>
+            <a href="/privacy" className="text-gray-700 hover:text-pink-600 transition-colors">Privacy</a>
+            <a href="/terms" className="text-gray-700 hover:text-pink-600 transition-colors">Terms</a>
           </div>
           <button className="bg-black text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-200">
             Get Started
@@ -175,7 +175,7 @@ const LandingPage = () => {
                               : 'translateX(275px) translateY(-10px) scale(0.8) ',
                             opacity: isMobile ? 0.6 : 0.8,
                             zIndex: 20,
-                           width: isMobile ? '235px' : '270px',      // ← NOUVELLE LIGNE
+                            width: isMobile ? '235px' : '270px',      // ← NOUVELLE LIGNE
                             maxWidth: isMobile ? '235px' : '270px'
                           };
                         case 2: // Far right (partially visible)
@@ -185,7 +185,7 @@ const LandingPage = () => {
                               : 'translateX(460px)translateY(-10px) scale(0.6) rotateY(-35deg)',
                             opacity: isMobile ? 0.3 : 0.4,
                             zIndex: 10,
-                         width: isMobile ? '235px' : '270px',      // ← NOUVELLE LIGNE
+                            width: isMobile ? '235px' : '270px',      // ← NOUVELLE LIGNE
                             maxWidth: isMobile ? '235px' : '270px'
                           };
                         case 3: // Far left (partially visible)
@@ -195,7 +195,7 @@ const LandingPage = () => {
                               : 'translateX(-460px) translateY(-10px) scale(0.6) rotateY(35deg)',
                             opacity: isMobile ? 0.3 : 0.4,
                             zIndex: 10,
-                          width: isMobile ? '235px' : '270px',      // ← NOUVELLE LIGNE
+                            width: isMobile ? '235px' : '270px',      // ← NOUVELLE LIGNE
                             maxWidth: isMobile ? '235px' : '270px'
                           };
                         case 4: // Previous card (left side)
@@ -461,9 +461,9 @@ const LandingPage = () => {
                 </div>
               </div>
               <div className="text-center mt-8">
-                <Link to="/privacy" className="text-[#FF587E] font-semibold hover:underline">
+                <a href="/privacy" className="text-[#FF587E] font-semibold hover:underline">
                   Read our full Privacy Policy <ChevronRight className="inline w-4 h-4" />
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -540,8 +540,8 @@ const LandingPage = () => {
             <div>
               <h4 className="font-semibold mb-4">Legal</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><Link to="/privacy" className="hover:text-white transition-colors font-semibold">Privacy Policy</Link></li>
-                <li><Link to="/terms" className="hover:text-white transition-colors font-semibold">Terms of Service</Link></li>
+                <li><a href="/privacy" className="hover:text-white transition-colors font-semibold">Privacy Policy</a></li>
+                <li><a href="/terms" className="hover:text-white transition-colors font-semibold">Terms of Service</a></li>
               </ul>
             </div>
             <div>
@@ -556,8 +556,8 @@ const LandingPage = () => {
           <div className="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 mb-4 md:mb-0">&copy; 2025 Hushy. All rights reserved.</p>
             <div className="flex space-x-6">
-              <Link to="/privacy" className="text-gray-400 hover:text-white transition-colors">Privacy</Link>
-              <Link to="/terms" className="text-gray-400 hover:text-white transition-colors">Terms</Link>
+              <a href="/privacy" className="text-gray-400 hover:text-white transition-colors">Privacy</a>
+              <a href="/terms" className="text-gray-400 hover:text-white transition-colors">Terms</a>
               <a href="mailto:support@hushy.app" className="text-gray-400 hover:text-white transition-colors">Support</a>
             </div>
           </div>
