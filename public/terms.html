@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - Hushy App</title>
+    <meta name="description" content="Terms of Service for Hushy mobile application. The rules that govern your use of Hushy.">
+    <link rel="canonical" href="https://hushy.app/terms">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(to bottom, #FDF2F4, #FFFFFF, #F3E8FF);
+            min-height: 100vh;
+        }
+        .nav {
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            background: linear-gradient(to right, #FF587E, #CC4B8D);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+        .nav-links a {
+            color: #666;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: #FF587E;
+        }
+        .get-started-btn {
+            background: #000;
+            color: white;
+            padding: 8px 24px;
+            border-radius: 24px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .get-started-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        .hero {
+            text-align: center;
+            padding: 80px 24px 64px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 16px;
+            color: #333;
+        }
+        .subtitle {
+            font-size: 1.25em;
+            color: #666;
+            margin-bottom: 8px;
+        }
+        .effective-date {
+            color: #94A3B8;
+            font-size: 0.875em;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px 80px;
+        }
+        .intro-card {
+            background: white;
+            border-radius: 24px;
+            padding: 32px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 32px;
+        }
+        .intro-card h2 {
+            font-size: 1.5em;
+            margin-bottom: 16px;
+            color: #333;
+        }
+        .intro-card p {
+            color: #4B5563;
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+        .intro-card p:last-child {
+            margin-bottom: 0;
+        }
+        .warning-box {
+            background: rgba(255, 88, 126, 0.1);
+            border-radius: 16px;
+            padding: 16px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-top: 16px;
+        }
+        .warning-icon {
+            color: #FF587E;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .section-card {
+            background: white;
+            border-radius: 24px;
+            padding: 32px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 32px;
+            transition: box-shadow 0.3s;
+        }
+        .section-card:hover {
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+        }
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+        .section-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(to right, #FF587E, #CC4B8D);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 16px;
+            color: white;
+        }
+        h2 {
+            font-size: 1.5em;
+            color: #333;
+            margin: 0;
+        }
+        h3 {
+            font-size: 1.125em;
+            color: #374151;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        ul {
+            margin-left: 24px;
+            margin-bottom: 16px;
+        }
+        li {
+            color: #4B5563;
+            margin-bottom: 8px;
+            position: relative;
+        }
+        li::marker {
+            color: #FF587E;
+        }
+        .subsection {
+            margin-bottom: 24px;
+        }
+        .subsection:last-child {
+            margin-bottom: 0;
+        }
+        .simple-text {
+            color: #4B5563;
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+        .contact-card {
+            background: linear-gradient(to right, #FF587E, #CC4B8D);
+            padding: 1px;
+            border-radius: 24px;
+            margin-top: 48px;
+        }
+        .contact-content {
+            background: white;
+            border-radius: 23px;
+            padding: 32px;
+        }
+        .contact-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        .contact-icon {
+            color: #FF587E;
+            margin-right: 12px;
+        }
+        .final-notice {
+            background: rgba(255, 88, 126, 0.1);
+            border-radius: 24px;
+            padding: 32px;
+            text-align: center;
+            margin-top: 48px;
+        }
+        .final-notice p {
+            color: #4B5563;
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+        .final-notice .thank-you {
+            color: #FF587E;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        a {
+            color: #FF587E;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            background: #1F2937;
+            color: white;
+            padding: 48px 24px;
+            margin-top: 80px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+        .footer-links {
+            display: flex;
+            gap: 24px;
+        }
+        .footer-links a {
+            color: #9CA3AF;
+            transition: color 0.3s;
+        }
+        .footer-links a:hover {
+            color: #FF587E;
+        }
+        .footer-links .active {
+            color: #FF587E;
+        }
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 32px auto 0;
+            padding-top: 32px;
+            border-top: 1px solid #374151;
+            text-align: center;
+            color: #94A3B8;
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-content">
+            <a href="/" class="logo">hushy</a>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/privacy">Privacy</a>
+                <a href="#" class="get-started-btn">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Terms of Service</h1>
+        <p class="subtitle">The rules that govern your use of Hushy</p>
+        <p class="effective-date">Effective date: January 1, 2025</p>
+    </section>
+
+    <div class="container">
+        <div class="intro-card">
+            <h2>Welcome to Hushy!</h2>
+            <p><strong>Important:</strong> These Terms of Service ("Terms") apply to the Hushy mobile application ("Hushy", "Hushy App", "we", "us", "our") developed and operated by Hushy Inc.</p>
+            <p>These Terms of Service ("Terms") govern your use of Hushy, our website, mobile applications, and services (collectively, the "Service"). By using Hushy, you agree to be bound by these Terms. If you don't agree to these Terms, please don't use our Service.</p>
+            <div class="warning-box">
+                <svg class="warning-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                    <line x1="12" y1="9" x2="12" y2="13"></line>
+                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                </svg>
+                <p style="color: #4B5563; font-size: 0.875em; margin: 0;">
+                    Please read these Terms carefully. They contain important information about your rights and obligations.
+                </p>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <div class="section-header">
+                <div class="section-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="8.5" cy="7" r="4"></circle>
+                        <circle cx="15.5" cy="7" r="4"></circle>
+                    </svg>
+                </div>
+                <h2>Account Terms</h2>
+            </div>
+
+            <div class="subsection">
+                <h3>Creating an Account</h3>
+                <ul>
+                    <li>You must be at least 13 years old to use Hushy</li>
+                    <li>You must provide accurate and complete information</li>
+                    <li>You are responsible for maintaining account security</li>
+                    <li>One person or legal entity may maintain only one account</li>
+                    <li>You may not use another person's account without permission</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>Account Responsibilities</h3>
+                <ul>
+                    <li>You are responsible for all activity under your account</li>
+                    <li>You must notify us immediately of any unauthorized use</li>
+                    <li>You may not use your account for illegal purposes</li>
+                    <li>We may suspend or terminate accounts that violate these terms</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <div class="section-header">
+                <div class="section-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>
+                </div>
+                <h2>Content Guidelines</h2>
+            </div>
+
+            <div class="subsection">
+                <h3>Your Content</h3>
+                <ul>
+                    <li>You retain ownership of content you post on Hushy</li>
+                    <li>You grant us a license to use, display, and distribute your content</li>
+                    <li>You are responsible for the content you post</li>
+                    <li>Content must not violate laws or third-party rights</li>
+                    <li>We may remove content that violates our guidelines</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>Prohibited Content</h3>
+                <ul>
+                    <li>Illegal content or content promoting illegal activities</li>
+                    <li>Harassment, bullying, or threats</li>
+                    <li>Hate speech or discrimination</li>
+                    <li>Sexually explicit content involving minors</li>
+                    <li>Spam or misleading content</li>
+                    <li>Content that violates others' privacy</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <div class="section-header">
+                <div class="section-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                        <line x1="1" y1="10" x2="23" y2="10"></line>
+                    </svg>
+                </div>
+                <h2>Payments and Fees</h2>
+            </div>
+
+            <div class="subsection">
+                <h3>Hushy Credits and Unlocking</h3>
+                <ul>
+                    <li>Users can purchase credits to unlock hushys</li>
+                    <li>Prices are set by content creators within our guidelines</li>
+                    <li>All purchases are final and non-refundable</li>
+                    <li>We take a 15% platform fee on all transactions</li>
+                    <li>Creators receive 85% of unlock fees</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>Creator Earnings</h3>
+                <ul>
+                    <li>Earnings are available for withdrawal after a 7-day period</li>
+                    <li>Minimum withdrawal amount is $10</li>
+                    <li>We reserve the right to withhold suspicious earnings</li>
+                    <li>Tax responsibilities lie with the earning party</li>
+                    <li>Payment processing times may vary by method</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <div class="section-header">
+                <div class="section-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                        <line x1="12" y1="9" x2="12" y2="13"></line>
+                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                    </svg>
+                </div>
+                <h2>Safety and Security</h2>
+            </div>
+
+            <div class="subsection">
+                <h3>Community Safety</h3>
+                <ul>
+                    <li>Report inappropriate content or behavior immediately</li>
+                    <li>Do not share personal contact information publicly</li>
+                    <li>Be cautious when meeting people from the app</li>
+                    <li>We are not responsible for user interactions</li>
+                    <li>We may share information with law enforcement when required</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>Account Security</h3>
+                <ul>
+                    <li>Use a strong, unique password</li>
+                    <li>Enable two-factor authentication when available</li>
+                    <li>Do not share your login credentials</li>
+                    <li>Log out of shared devices</li>
+                    <li>Keep your app updated to the latest version</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <div class="section-header">
+                <div class="section-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line>
+                    </svg>
+                </div>
+                <h2>Prohibited Activities</h2>
+            </div>
+
+            <h3>You may not:</h3>
+            <ul>
+                <li>Impersonate others or provide false information</li>
+                <li>Use automated scripts or bots</li>
+                <li>Attempt to hack or disrupt our service</li>
+                <li>Circumvent any content restrictions or security measures</li>
+                <li>Use the service for commercial spam</li>
+                <li>Violate any applicable laws or regulations</li>
+                <li>Infringe on intellectual property rights</li>
+                <li>Collect user data without permission</li>
+            </ul>
+        </div>
+
+        <div class="section-card">
+            <div class="section-header">
+                <div class="section-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                        <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                        <line x1="15" y1="9" x2="15.01" y2="9"></line>
+                    </svg>
+                </div>
+                <h2>Legal Terms</h2>
+            </div>
+
+            <div class="subsection">
+                <h3>Limitation of Liability</h3>
+                <ul>
+                    <li>Hushy is provided 'as is' without warranties</li>
+                    <li>We are not liable for user-generated content</li>
+                    <li>We are not responsible for lost profits or data</li>
+                    <li>Our liability is limited to the amount you paid us</li>
+                    <li>Some jurisdictions don't allow these limitations</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>Indemnification</h3>
+                <ul>
+                    <li>You agree to defend and hold us harmless</li>
+                    <li>This includes claims arising from your use of Hushy</li>
+                    <li>This includes your violation of these terms</li>
+                    <li>We may assume defense at our own expense</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <div class="section-header">
+                <div class="section-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                </div>
+                <h2>Dispute Resolution</h2>
+            </div>
+
+            <div class="simple-text">
+                <p>We prefer to resolve disputes amicably. If you have a concern, please contact us first at support@hushy.app. Most issues can be resolved quickly and to everyone's satisfaction.</p>
+                <p>If we can't resolve the dispute informally, you agree to binding arbitration under the rules of the American Arbitration Association. The arbitration will be conducted in English and the decision will be final.</p>
+                <p>You agree to resolve disputes with us individually, not as part of a class action. This means you cannot bring a class action lawsuit against us or participate in one.</p>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <h2>Governing Law</h2>
+            <p class="simple-text">
+                These Terms are governed by the laws of the State of Delaware, United States, without regard to conflict of law principles. You agree to submit to the personal jurisdiction of the courts located in Delaware.
+            </p>
+        </div>
+
+        <div class="section-card">
+            <h2>Changes to Terms</h2>
+            <div class="simple-text">
+                <p>We may modify these Terms at any time. If we make significant changes, we'll notify you through the app or by email. Your continued use of Hushy after changes take effect means you accept the new Terms.</p>
+                <p>If you don't agree to the new Terms, you must stop using Hushy. We'll always post the most current version of our Terms on this page with the effective date.</p>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <h2>Termination</h2>
+            <div class="simple-text">
+                <p>You can terminate your account at any time through the app settings. We may suspend or terminate your account if you violate these Terms or for any other reason at our discretion.</p>
+                <p>Upon termination, your right to use Hushy will cease immediately. Provisions that should survive termination will remain in effect.</p>
+            </div>
+        </div>
+
+        <div class="contact-card">
+            <div class="contact-content">
+                <div class="contact-header">
+                    <svg class="contact-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    <h2>Questions?</h2>
+                </div>
+                <p style="color: #4B5563; margin-bottom: 16px;">
+                    If you have any questions about these Terms of Service, please contact us:
+                </p>
+                <ul style="list-style: none; margin-left: 0;">
+                    <li style="margin-bottom: 8px; color: #4B5563;">
+                        <strong>Email:</strong> legal@hushy.app
+                    </li>
+                    <li style="margin-bottom: 8px; color: #4B5563;">
+                        <strong>Support:</strong> support@hushy.app
+                    </li>
+                    <li style="margin-bottom: 8px; color: #4B5563;">
+                        <strong>Address:</strong> Hushy Inc., 123 Secret Street, San Francisco, CA 94102
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="final-notice">
+            <p>By using Hushy, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.</p>
+            <p class="thank-you">Thank you for being part of the Hushy community! 💕</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="logo">hushy</div>
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="/privacy">Privacy</a>
+                <a href="/terms" class="active">Terms</a>
+                <a href="mailto:support@hushy.app">Support</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Hushy. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>-bottom: 10px;
+            font-size: 1.3em;
+        }
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        ul {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .highlight {
+            background-color: #FFF3F6;
+            padding: 20px;
+            border-left: 4px solid #FF587E;
+            margin: 20px 0;
+        }
+        .contact-info {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+        a {
+            color: #FF587E;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .nav {
+            background-color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            margin-bottom: 40px;
+        }
+        .nav-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #FF587E;
+        }
+        .last-updated {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-content">
+            <div class="logo">Hushy</div>
+            <div>
+                <a href="/">Home</a> | 
+                <a href="/terms">Terms</a> | 
+                <a href="/privacy">Privacy</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Terms of Service</h1>
+        <p class="last-updated">Effective Date: January 1, 2025</p>
+
+        <div class="highlight">
+            <p><strong>Welcome to Hushy!</strong> These Terms of Service ("Terms") govern your use of the Hushy mobile application and services. By using Hushy, you agree to these Terms. If you don't agree, please don't use our service.</p>
+        </div>
+
+        <h2>1. Acceptance of Terms</h2>
+        <p>By accessing or using Hushy, you agree to be bound by these Terms and our Privacy Policy. These Terms apply to all users of the Hushy mobile application on iOS and Android platforms.</p>
+
+        <h2>2. Account Registration and Security</h2>
+        
+        <h3>Eligibility</h3>
+        <ul>
+            <li>You must be at least 13 years old to use Hushy</li>
+            <li>You must provide accurate and complete information</li>
+            <li>You may not impersonate others or provide false information</li>
+        </ul>
+
+        <h3>Account Security</h3>
+        <ul>
+            <li>You are responsible for maintaining the security of your account</li>
+            <li>You must notify us immediately of any unauthorized access</li>
+            <li>We use Google Sign-In for secure authentication</li>
+            <li>You are responsible for all activities under your account</li>
+        </ul>
+
+        <h2>3. User Content and Conduct</h2>
+        
+        <h3>Your Content</h3>
+        <p>When you post content on Hushy:</p>
+        <ul>
+            <li>You retain ownership of your content</li>
+            <li>You grant us a license to use, display, and distribute your content on the platform</li>
+            <li>You are solely responsible for your content</li>
+            <li>Your content must comply with all applicable laws</li>
+        </ul>
+
+        <h3>Prohibited Content</h3>
+        <p>You may NOT post content that:</p>
+        <ul>
+            <li>Is illegal or promotes illegal activities</li>
+            <li>Contains harassment, hate speech, or threats</li>
+            <li>Infringes on intellectual property rights</li>
+            <li>Contains malware or harmful code</li>
+            <li>Is sexually explicit content involving minors</li>
+            <li>Violates others' privacy</li>
+            <li>Is spam or misleading</li>
+        </ul>
+
+        <h2>4. Payments and Fees</h2>
+        
+        <h3>Pricing</h3>
+        <ul>
+            <li>Hushy is free to download and browse</li>
+            <li>Users can purchase credits to unlock content</li>
+            <li>Content creators set their own unlock prices</li>
+            <li>All prices are shown in USD unless otherwise stated</li>
+        </ul>
+
+        <h3>Platform Fees</h3>
+        <ul>
+            <li>Hushy takes a 15% platform fee on all transactions</li>
+            <li>Content creators receive 85% of unlock fees</li>
+            <li>Fees are subject to change with notice</li>
+        </ul>
+
+        <h3>Refund Policy</h3>
+        <p>All purchases are final and non-refundable except where required by law.</p>
+
+        <h2>5. Intellectual Property</h2>
+        <ul>
+            <li>The Hushy name, logo, and design are our trademarks</li>
+            <li>You may not use our intellectual property without permission</li>
+            <li>You must respect others' intellectual property rights</li>
+            <li>We may remove content that infringes on others' rights</li>
+        </ul>
+
+        <h2>6. Privacy and Data Protection</h2>
+        <p>Your privacy is important to us. Our <a href="/privacy">Privacy Policy</a> explains how we collect, use, and protect your information. Key points:</p>
+        <ul>
+            <li>We use Google OAuth for secure authentication</li>
+            <li>We do NOT sell your personal data to third parties</li>
+            <li>We only access basic Google profile information</li>
+            <li>You can delete your account and data at any time</li>
+        </ul>
+
+        <h2>7. Disclaimers and Limitations</h2>
+        
+        <h3>Service Availability</h3>
+        <p>Hushy is provided "as is" without warranties. We don't guarantee:</p>
+        <ul>
+            <li>Uninterrupted or error-free service</li>
+            <li>Accuracy of user-generated content</li>
+            <li>Specific results from using the service</li>
+        </ul>
+
+        <h3>Limitation of Liability</h3>
+        <p>To the maximum extent permitted by law:</p>
+        <ul>
+            <li>We are not liable for indirect or consequential damages</li>
+            <li>Our total liability is limited to the amount you paid us in the past 12 months</li>
+            <li>We are not responsible for user interactions or content</li>
+        </ul>
+
+        <h2>8. Indemnification</h2>
+        <p>You agree to indemnify and hold Hushy harmless from any claims arising from:</p>
+        <ul>
+            <li>Your use of the service</li>
+            <li>Your content</li>
+            <li>Your violation of these Terms</li>
+            <li>Your violation of others' rights</li>
+        </ul>
+
+        <h2>9. Termination</h2>
+        <p>We may suspend or terminate your account if you violate these Terms. You may delete your account at any time through the app settings. Upon termination:</p>
+        <ul>
+            <li>Your right to use Hushy ends immediately</li>
+            <li>We may delete your content</li>
+            <li>Certain provisions of these Terms survive termination</li>
+        </ul>
+
+        <h2>10. Dispute Resolution</h2>
+        <p>Any disputes will be resolved through binding arbitration in accordance with the American Arbitration Association rules. You agree to resolve disputes individually, not through class actions.</p>
+
+        <h2>11. Governing Law</h2>
+        <p>These Terms are governed by the laws of Delaware, USA, without regard to conflict of law principles.</p>
+
+        <h2>12. Changes to Terms</h2>
+        <p>We may update these Terms from time to time. We'll notify you of significant changes through the app or email. Continued use after changes means you accept the new Terms.</p>
+
+        <h2>13. Entire Agreement</h2>
+        <p>These Terms and our Privacy Policy constitute the entire agreement between you and Hushy regarding your use of our service.</p>
+
+        <div class="contact-info">
+            <h2>Contact Us</h2>
+            <p>If you have questions about these Terms:</p>
+            <ul>
+                <li><strong>Email:</strong> legal@hushy.app</li>
+                <li><strong>Support:</strong> support@hushy.app</li>
+                <li><strong>Address:</strong> Hushy Inc., 123 Secret Street, San Francisco, CA 94102</li>
+            </ul>
+        </div>
+
+        <div class="highlight" style="margin-top: 40px; text-align: center;">
+            <p><strong>By using Hushy, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.</strong></p>
+        </div>
+    </div>
+</body>
+</html>
